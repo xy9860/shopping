@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>shopping</display-name>
+	<listener>   
+		<listener-class>com.xy9860.shopping.util.ConextListener</listener-class>   
+	</listener>  
+    <filter>
+  		<filter-name>enCodingFilter</filter-name>
+  		<filter-class>com.xy9860.shopping.filter.EncodingFilter</filter-class>
+  	</filter>
+  	<filter-mapping>
+  		<filter-name>enCodingFilter</filter-name>
+  		<url-pattern>/*</url-pattern>
+  	</filter-mapping>
+  	<filter>
+  		<filter-name>usersFilter</filter-name>
+  		<filter-class>com.xy9860.shopping.filter.UserFilter</filter-class>
+  	</filter>
+  	<filter-mapping>
+  		<filter-name>usersFilter</filter-name>
+  		<url-pattern>/users/*</url-pattern>
+  	</filter-mapping>
+  	<filter-mapping>
+  		<filter-name>usersFilter</filter-name>
+  		<url-pattern>/ForderSer</url-pattern>
+  	</filter-mapping>
+    <filter>
+  		<filter-name>adminFilter</filter-name>
+  		<filter-class>com.xy9860.shopping.filter.AdminFilter</filter-class>
+  	</filter>
+  	<filter-mapping>
+  		<filter-name>adminFilter</filter-name>
+  		<url-pattern>/admin/*</url-pattern>
+  	</filter-mapping>
+  <servlet>
+    <servlet-name>AccountSer</servlet-name>
+    <servlet-class>com.xy9860.shopping.ser.AccountSer</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>CategorySer</servlet-name>
+    <servlet-class>com.xy9860.shopping.ser.CategorySer</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>GoodsSer</servlet-name>
+    <servlet-class>com.xy9860.shopping.ser.GoodsSer</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>UsersSer</servlet-name>
+    <servlet-class>com.xy9860.shopping.ser.UsersSer</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ForderSer</servlet-name>
+    <servlet-class>com.xy9860.shopping.ser.ForderSer</servlet-class>
+  </servlet>
+
+
+
+
+  <servlet-mapping>
+    <servlet-name>AccountSer</servlet-name>
+    <url-pattern>/AccountSer</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>CategorySer</servlet-name>
+    <url-pattern>/CategorySer</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>GoodsSer</servlet-name>
+    <url-pattern>/GoodsSer</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UsersSer</servlet-name>
+    <url-pattern>/UsersSer</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ForderSer</servlet-name>
+    <url-pattern>/ForderSer</url-pattern>
+  </servlet-mapping>
+  	<error-page>
+  		<error-code>404</error-code>
+  		<location>/error.jsp</location>
+  	</error-page>
+	<welcome-file-list>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+ <welcome-file-list>
+<!--     <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file> -->
+    <welcome-file>index.jsp</welcome-file>
+<!--     <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file> -->
+  </welcome-file-list>
+  	
+</web-app>

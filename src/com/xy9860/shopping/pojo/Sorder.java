@@ -1,0 +1,49 @@
+package com.xy9860.shopping.pojo;
+
+
+public class Sorder {
+	private  int sid;
+	private String sname;
+	private double sprice;
+	private int snumber;
+	private int fid;
+	private Goods goods=new Goods();
+	public int getSid() {
+		return sid;
+	}
+	public void setSid(int sid) {
+		this.sid = sid;
+	}
+	public String getSname() {
+		return sname;
+	}
+	public void setSname(String sname) {
+		this.sname = sname;
+	}
+	public double getSprice() {
+		return sprice;
+	}
+	public void setSprice(double sprice) {
+		this.sprice = sprice;
+	}
+	public int getSnumber() {
+		return snumber;
+	}
+	public void setSnumber(int snumber) {
+		this.snumber = snumber;
+	}
+	public int getFid() {
+		return fid; 
+	}
+	public void setFid(int fid) {
+		this.fid = fid;
+	}
+	public Goods getGoods() {
+		return goods;
+	}
+	public void setGoods(Goods goods) {
+		this.goods = goods;
+	}
+	
+	
+}
